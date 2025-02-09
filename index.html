@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khair Muhammad - Backend Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        .navbar {
+            background-color: var(--primary-color) !important;
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .hero-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            border: 4px solid var(--secondary-color);
+        }
+
+        .btn-custom {
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2.5rem;
+            font-weight: 600;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .skill-badge {
+            background-color: var(--secondary-color);
+            color: white;
+            margin: 0.3rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .experience-card,
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-card:hover,
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body h5 {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            padding: 0.75rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 0.75rem 1.25rem;
+            background: #f8f9fa;
+            margin-bottom: 0.5rem;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .university-link {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .university-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" id="backToTopBtn" href="#">Khair Muhammad</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#languages">Languages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <img src="imgs/my_image.png" alt="Khair Muhammad" class="hero-image">
+            <h1>Khair Muhammad</h1>
+            <h2>Backend Developer</h2>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="mailto:khairmuhammad2048@gmail.com" class="btn btn-outline-secondary btn-custom">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://linkedin.com/in/khair-muhammad" target="_blank"
+                    class="btn btn-outline-secondary btn-custom">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Summary</h2>
+            <p>Backend developer with over 3 years of experience delivering impactful, scalable software solutions
+                across diverse projects. Strong expertise in Java, Spring Boot, C#, .NET Core, JavaScript, React, Azure,
+                and AWS Cloud services. Proven success in Test Driven Development (TDD) and Agile methodologies,
+                optimizing processes, reducing deployment times, and consistently achieving client satisfaction.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Key Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Backend</h4>
+                    <span class="badge skill-badge">Java</span>
+                    <span class="badge skill-badge">Spring Boot</span>
+                    <span class="badge skill-badge">C#</span>
+                    <span class="badge skill-badge">.NET Core</span>
+                    <span class="badge skill-badge">Python</span>
+                    <span class="badge skill-badge">Flask</span>
+                </div>
+                <div class="col-md-6">
+                    <h4>Frontend</h4>
+                    <span class="badge skill-badge">JavaScript</span>
+                    <span class="badge skill-badge">React JS</span>
+                    <span class="badge skill-badge">TypeScript</span>
+                    <span class="badge skill-badge">Tailwind</span>
+                    <span class="badge skill-badge">Bootstrap</span>
+                    <span class="badge skill-badge">HTML</span>
+                    <span class="badge skill-badge">CSS</span>
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h4>Databases</h4>
+                    <span class="badge skill-badge">MariaDB</span>
+                    <span class="badge skill-badge">PostgreSQL</span>
+                    <span class="badge skill-badge">MySQL</span>
+                    <span class="badge skill-badge">MSSQL Server</span>
+                    <span class="badge skill-badge">MongoDB</span>
+
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h4>DevOps & Cloud</h4>
+                    <span class="badge skill-badge">AWS</span>
+                    <span class="badge skill-badge">Azure</span>
+                    <span class="badge skill-badge">Docker</span>
+                    <span class="badge skill-badge">Kubernetes</span>
+                    <span class="badge skill-badge">Jenkins</span>
+                    <span class="badge skill-badge">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-card mb-4">
+                <h4>Web and App Developer</h4>
+                <h5>Healthhub Co., Ltd. <span class="text-muted">(March 2022 - Present)</span></h5>
+                <ul class="mt-3">
+                    <li>Engineered and maintained scalable RESTful API architecture with Spring Boot.</li>
+                    <li>Integrated Server-Sent Events (SSE) for real-time notifications.</li>
+                    <li>Collaborated with cross-functional teams to resolve production and development issues.</li>
+                </ul>
+            </div>
+            <div class="experience-card mb-4">
+                <h4>Software Developer</h4>
+                <h5>Logic-Unit <span class="text-muted">(February 2021 - February 2022)</span></h5>
+                <ul class="mt-3">
+                    <li>Enhanced Android apps developed in Java and Xamarin (C#).</li>
+                    <li>Maintained and updated backend systems in .NET Core.</li>
+                    <li>Deployed and managed Cloud Apps on AWS and Azure.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5>Bachelor of Science in Computer Science</h5>
+                    <p>
+                        <a href="https://www.iba-suk.edu.pk/" target="_blank" class="university-link fw-bold">
+                            Sukkur IBA University
+                        </a>
+                        <span class="text-muted">(August 2016 – December 2021)</span>
+                    </p>
+                    <p>
+                        Location: <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/c4BA3sYg7a2QnDf5A" target="_blank"
+                            class="text-decoration-none">
+                            Sukkur, Sindh, Pakistan
+                        </a>
+                    </p>
+                    <p>Courses: Object-Oriented Programming (OOP), Data Structures, Analysis of Algorithms, Data
+                        Science.</p>
+                </div>
+            </div>
+
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5>Higher Secondary Certificate</h5>
+                    <p>
+                        <a href="#" target="_blank" class="university-link fw-bold">
+                            Govt Boys College Thatta
+                        </a>
+                        <span class="text-muted">(August 2012 – March 2014)</span>
+                    </p>
+                    <p>
+                        Location: <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/VyZP3PiFtRWykfV1A" target="_blank"
+                            class="text-decoration-none">
+                            Thatta, Sindh, Pakistan
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5>Secondary School Certificate</h5>
+                    <p>
+                        <a href="#" target="_blank" class="university-link fw-bold">
+                            Govt Boys High School Gujjo
+                        </a>
+                        <span class="text-muted">(August 2010 – March 2012)</span>
+                    </p>
+                    <p>Location: <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/94bRTQtcCHKzwjYV9" target="_blank"
+                            class="text-decoration-none">
+                            Gujjo, Thatta, Sindh, Pakistan
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-card mb-4">
+                <h5>Eyes on School Going Baby</h5>
+                <p>Real-Time Facial Detection, Recognition, and Pairing System (Final Year Thesis/Project for BSCS).</p>
+                <p>
+                    <span class="badge skill-badge">Python</span>
+                    <span class="badge skill-badge">OpenCV</span>
+                    <span class="badge skill-badge">ONNX Face Detection Model</span>
+                    <span class="badge skill-badge">PySimpleGUI</span>
+                    <span class="badge skill-badge">MobileFaceNet Face Recognition Model</span>
+                    <span class="badge skill-badge">SMTP Email</span>
+                    <span class="badge skill-badge">WhatsApp API</span>
+                </p>
+                <ul class="mt-2">
+                    <li>Developed a prototype application for children's security using Python, leveraging face
+                        recognition techniques for real-time monitoring.</li>
+                    <li>Designed and implemented entry and exit monitoring systems to detect and recognize children and
+                        accompanying individuals.</li>
+                    <li>Trained deep learning face recognition models on registered images of children and their
+                        parents/guardians for accurate identification.</li>
+                    <li>Integrated email and WhatsApp notification services to instantly alert parents with images of
+                        their child and the accompanying person.</li>
+                    <li>Wrapped machine learning models into a user-friendly desktop application using PySimpleGUI for
+                        seamless interaction.</li>
+                    <li>Applied Artificial Intelligence and Deep Learning techniques to process images from standard
+                        cameras for real-time detection.</li>
+                </ul>
+            </div>
+            <div class="project-card mb-4">
+                <h5>Graduate Admission Prediction</h5>
+                <p>Machine Learning-Based Admission Prediction System.</p>
+                <p>
+                    <span class="badge skill-badge">Python</span>
+                    <span class="badge skill-badge">Linear Regression</span>
+                    <span class="badge skill-badge">Flask</span>
+                    <span class="badge skill-badge">HTML</span>
+                    <span class="badge skill-badge">CSS</span>
+                    <span class="badge skill-badge">Heroku</span>
+                </p>
+                <ul class="mt-2">
+                    <li>Trained a linear regression model in Python to predict a student’s chance of admission based on
+                        university rating, undergraduate GPA, GRE score, and research experience.</li>
+                    <li>Developed a responsive HTML web interface to collect user input and display admission prediction
+                        results.</li>
+                    <li>Deployed the trained model on Heroku for public access, providing real-time predictions (later
+                        removed due to Heroku free-tier expiration).</li>
+                    <li>Integrated the machine learning model with the web interface for a seamless user experience.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Languages</h2>
+            <ul>
+                <li>Sindhi (Native)</li>
+                <li>
+                    <p><strong>English - IELTS Academic (10 December 2024):</strong> Overall Score: 6.5</p>
+                    <ul class="mt-0">
+                        <li>Listening: 7.5</li>
+                        <li>Reading: 7.0</li>
+                        <li>Speaking: 6.0</li>
+                        <li>Writing: 6.0</li>
+                    </ul>
+                </li>
+                <li>Urdu (Fluent)</li>
+                <li>Norwegian (Basic)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <ul>
+                <li>Introduction to Git (DataCamp)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Awards</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>2017:</strong> Higher Education Commission Scholarship – Awarded by the Higher Education
+                    Commission of Pakistan for academic performance and financial need.
+                </li>
+                <li class="list-group-item">
+                    <strong>2015:</strong> Talent Hunt Program (THP) Scholarship – Awarded by Sukkur IBA University for
+                    excellent academic performance.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Contact</h2>
+            <p>Email: <a href="mailto:khairmuhammad2048@gmail.com">khairmuhammad2048@gmail.com</a></p>
+            <p>Phone: <a href="tel:+923063229252">+92 3063229252</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/khair-muhammad"
+                    target="_blank">https://linkedin.com/in/khair-muhammad</a></p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <script>
+        // Function to scroll to the top smoothly
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Show or hide the "Back to Top" button based on scroll position
+        window.addEventListener('scroll', function () {
+            const button = document.getElementById('backToTopBtn');
+            if (window.scrollY > 300) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        });
+
+        // Attach click event to the button
+        document.getElementById('backToTopBtn').addEventListener('click', scrollToTop);
+    </script>
+</body>
+
+</html>
