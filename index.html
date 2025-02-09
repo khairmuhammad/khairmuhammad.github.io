@@ -240,8 +240,9 @@
         <div class="container">
             <h2 class="section-title">Professional Experience</h2>
             <div class="experience-card mb-4">
-                <h4>Web and App Developer</h4>
+                <h4>Web and App Developer (Remote)</h4>
                 <h5>Healthhub Co., Ltd. <span class="text-muted">(March 2022 - Present)</span></h5>
+                <span id="durationHealthhub"></span>
                 <ul class="mt-3">
                     <li>Engineered and maintained scalable RESTful API architecture with Spring Boot.</li>
                     <li>Integrated Server-Sent Events (SSE) for real-time notifications.</li>
@@ -251,6 +252,7 @@
             <div class="experience-card mb-4">
                 <h4>Software Developer</h4>
                 <h5>Logic-Unit <span class="text-muted">(February 2021 - February 2022)</span></h5>
+                <span id="durationLogicUnit"></span>
                 <ul class="mt-3">
                     <li>Enhanced Android apps developed in Java and Xamarin (C#).</li>
                     <li>Maintained and updated backend systems in .NET Core.</li>
@@ -480,6 +482,35 @@
 
         // Attach click event to the button
         document.getElementById('backToTopBtn').addEventListener('click', scrollToTop);
+    </script>
+
+    <script>
+        function calculateYearsAndMonths(fromDateStr, toDateStr = null) {
+            const fromDate = new Date(fromDateStr);
+            const toDate = toDateStr ? new Date(toDateStr) : new Date();
+
+            let years = toDate.getFullYear() - fromDate.getFullYear();
+            let months = toDate.getMonth() - fromDate.getMonth();
+
+            // Adjust if the 'to' month is earlier than the 'from' month
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            if (years === 1 && months === 0) {
+                return `${years} year`;
+            } else {
+                return `${years} year(s) and ${months} month(s)`;
+            }
+            
+        }
+
+        const duration_hh = calculateYearsAndMonths('2022-03-01');
+        document.getElementById('durationHealthhub').textContent = ` (Total Duration: ${duration_hh})`;
+
+        const duration_lu = calculateYearsAndMonths('2021-02-24', '2022-02-24');
+        document.getElementById('durationLogicUnit').textContent = ` (Total Duration: ${duration_lu})`;
     </script>
 </body>
 
